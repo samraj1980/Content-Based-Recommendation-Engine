@@ -310,7 +310,7 @@ Algorithms used are:
   </tr>
 </table>
 
-## 9.0 MODEL EVALUATION AND TESTING
+## 8.0 MODEL EVALUATION AND TESTING
 
 Defining evaluation, Metrics for Recommendation Systems is a very important step, which is going to decide the quality of the results being produced and validating those results. For a content-based approach, attributes of the question and the responses are important from the documents. To find similarity between responses we will have to consider all the related data attributes from the data.
 Furthermore, we can extract features like sentiment score and tf-idf scores from responses and questions. The tf-idf score of a word reflects how important a word is to a document in a collection of documents. 

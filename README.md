@@ -381,7 +381,7 @@ We analyzed the entire corpus of documents provided by InpharmD from a network a
 <table>
   <tr>
      <td>
-      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_15.png">
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/screenshot_15.png">
     </td>
   </tr>
   <tr>
@@ -395,7 +395,7 @@ We analyzed the entire corpus of documents provided by InpharmD from a network a
   </tr> 
   <tr>
      <td>
-      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_16.png">
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/screenshot_16.png">
     </td>
   </tr>
   <tr>

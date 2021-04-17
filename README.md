@@ -32,9 +32,11 @@ In this project, we are going to use various content-based recommendation algori
   </tr>
   <tr>
   <td>
+    <p align = "center">  
         <div class="text-purple">
           <a href="#" class="text-inherit">Fig 1: System Architecture </a>
         </div>
+    </p>
    </td>
   </tr>
 </table>

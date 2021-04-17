@@ -34,9 +34,8 @@ In this project, we are going to use various content-based recommendation algori
   <td>
         <div class="text-purple">
           <a href="#" class="text-inherit">Fig 1: System Architecture </a>
-      </div>
-        
-    </td>
+        </div>
+   </td>
   </tr>
 </table>
 

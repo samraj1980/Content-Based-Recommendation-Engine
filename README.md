@@ -32,7 +32,7 @@ In this project, we are going to use various content-based recommendation algori
   </tr>
   <tr>
     <td>
-      ![#f03c15]('Fig 1: System Architecture')
+      'Fig 1: System Architecture'
     </td>
   </tr>
 </table>

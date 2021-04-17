@@ -26,7 +26,7 @@ In this project, we are going to use various content-based recommendation algori
 
 <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_1.png">
 
-### Figure 1 : System Architecture 
+<span style="color:blue">some *blue* Fig 1: System Architecture </span>  
 
 
 

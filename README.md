@@ -266,3 +266,147 @@ In this case, the total number of features decreased from the original 41,683 to
    </td>
   </tr>
 </table>
+
+
+## 7.0 EXPERIMENTS
+
+### 7.1 SIMILARITY 
+There are different approaches on how to calculate a similarity between two vectors or matrices. Regardless of the models, either content-based filtering or collaborative filtering algorithms, we need to use similarity measures to find how equal two vectors of users or items are in between them. It will be the distance between vectors. 
+
+#### 7.2.1 Cosine Similarity
+According to Wikipedia, “Cosine similarity is a measure of similarity between two non-zero vectors of an inner product space it is defined to equal the cosine of the angle between them, which is also the same as the inner production of the same vectors normalized to both have length 1.” In our experiment, we’ve seen that cosine similarity works better than Jenson-Shannon because the vector/matrix needs to be  probability distributions. However, the feature matrix and question matrix are more geometrical.
+#### 7.2.2 Jenson-Shannon
+According to Wikipedia, “the Jensen–Shannon divergence is a method of measuring the similarity between two probability distributions. The square root of the Jensen–Shannon divergence is a metric often referred to as Jensen-Shannon distance.” We used it for our LDA model. However, it couldn’t beat the Cosine similarity. The Densities of two matrices are too sparse and they were not meant to be probability distributions. 
+
+### 7.2 COSINE SIMILARITY & TOPIC MODELING (LDA)
+Firstly, we’d like to build a based model with a simple algorithm, which is TF-IDF & Cos. Similarity. This is a supervised, non-parametric machine learning approach, which uses the similarity scores to determine the class to which the new point belong. In the context of NLP based recommendation, we can use this approach to find K documents, which are similar to the new one and render them as recommendations based on similarity of content. Involves two steps: 
+a.	Vectorize each document in the corpus using Term Frequency Inverse Document frequency (TFIDF) and perform a dimensionality reduction to retain only significant words / features.
+b.	Leverage Cosine similarity function to find the K documents (vectors) which are most similar to the one being examined. 
+
+As a similar approach, we developed a Topic modeling with LDA model. Data should be processed in similar ways. However, we applied LDA to assign topics to each document. Unlike, we query a question against an entire document. With LDA, we first assign a topic to question and then search for similar documents among the topics. In other words, we use an additional feature, a topic. It’s hard to say one is better than the other, but we could have similar results from both models. 
+
+### 7.3 MATRIX FACTORIZATION APPROACH (TRUNCATED SVD)
+
+Matrix factorization is a class of collaborative filtering algorithms used in recommendation systems. Matrix factorization algorithms work by decomposing the user-item interaction matrix into the product of two lower dimensionality rectangular matrices.
+
+The idea behind matrix factorization is to represent users and items in a lower dimensional latent space. We used truncated SVD for this approach.
+Algorithms used are:
+●	Singular value decomposition (SVD)
+●	Stochastic gradient descent (SGD)
+●	Alternating least squares (ALS)
+
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_13.png">
+    </td>
+  </tr>
+  <tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 13: Workings of Matrix Factorization         </a>
+        </div>
+   </td>
+  </tr>
+</table>
+
+## 9.0 MODEL EVALUATION AND TESTING
+
+Defining evaluation, Metrics for Recommendation Systems is a very important step, which is going to decide the quality of the results being produced and validating those results. For a content-based approach, attributes of the question and the responses are important from the documents. To find similarity between responses we will have to consider all the related data attributes from the data.
+Furthermore, we can extract features like sentiment score and tf-idf scores from responses and questions. The tf-idf score of a word reflects how important a word is to a document in a collection of documents. 
+Secondly, to compute similarity between question and the responses, we simply take the cosine similarity between the question vector and the response vector. We are also going to explore a model-based approach and matrix factorization model is the best example of that approach. High-level plan is to create the utility matrix using matrix decomposition techniques and calculate the prediction rating. Using the calculated prediction rate, we decide which documents best answer the given question.
+
+## 9.0 RECOMMENDATION WEB APPLICATION
+
+The InpharmD recommendation web application enables a user to enter the new user query and choose the recommendation algorithm to be used for rendering the closest recommendations.
+This web application is built on python-flask-jinja2 technology stack and it invokes a restful Web API built on Python-flask technology, which uses the trained ML models to render the recommendation results to the user portal. 
+
+A. Link to the Rest API: 
+ https://inpharmd.pythonanywhere.com/recommendation?method=01&question=??&username=??&password=??
+
+B. Link to the Web Application: 
+https://inpharmdwebapp.pythonanywhere.com/
+
+
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_14.png">
+    </td>
+  </tr>
+  <tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 14: Recommendation Web Application         </a>
+        </div>
+   </td>
+  </tr>
+</table>
+
+## 10. CONCLUSION
+Overall, tested various different models to provide a recommendation based on a question provided by healthcare workers. It’s hard to tell which model outperforms others because the results are relatively similar to each other. However, it generates acceptable recommendations from users and a CTO of InpharmD verified its usefulness. 
+
+To make a more reliable recommendation system, first, we need more data to train a model. Also, we need to spend more time wrangling our data. It was unclear which word we should remove or not because there are domain specific languages in documents. If we clean the data with a regular approach, we might lose some very important medical words. 
+
+To sum up, In this project, we leveraged the documents from the InpharmD data to train various ML algorithms and then use the same to render recommendations for a new user query based on similarity metrics. 
+
+### 11. REFERENCES
+1. Comparing Twitter and Traditional Media Using Topic Models, European Conference on
+Information RetrievalECIR 2011: Advances in Information Retrieval pp 338-349, Wayne
+Xin ZhaoJing Jiang, Jianshu Weng, Jing He, Ee-Peng Lim, Hongfei Yan, Xiaoming Li
+
+2. Latent Dirichlet Allocation David M. Blei, Andrew Y. Ng, Michael I. Jordan; 3 (Jan): 993-1022,2003.
+
+3. Probabilistic author-topic models for information discovery::M Steyvers, P Smyth, M Rosen-Zvi… - Publication: KDD '04: Proceedings of the tenth ACM SIGKDD international conference on Knowledge discovery and data mining. August 2004 Pages 306 315 https://doi.org/10.1145/1014052.1014087
+
+4. Empirical Study of Topic Modeling in Twitter :Liangjie Hong and Brian D. Davison Publication: SOMA '10: Proceedings of the First Workshop on Social Media Analytics July
+2010 Pages 80–88 https://doi.org/10.1145/1964858.1964870
+
+5. https://nlp.stanford.edu/IR-book/html/htmledition/latent-semantic-indexing-1.html
+
+6. An Introduction to Latent Semantic Analysis: Thomas K Landauer Department of Psychology University of Colorado at Boulder, Peter W. Foltz Department of Psychology New Mexico State University Darrell Laham Department of Psychology University of Colorado at Boulder, Landauer, T.K., Foltz, P. W., & Laham, D. (1998). Introduction to Latent Semantic Analysis. Discourse Processes, 25, 259-284.
+
+7.https://www.analyticssteps.com/blogs/introduction-latent-semantic-analysis-lsa-and-latentdirichlet-allocation-lda
+
+8. Nonnegative matrix factorization for interactive topic modeling and document clustering Da
+Kuang and Jaegul Choo and Haesun Park 
+
+9. Spatial Aggregation Facilitates Discovery of Spatial Topics: Aniruddha Maiti Temple University Philadelphia, PA-19122, USA aniruddha.maiti@temple.edu Slobodan Vucetic Temple University Philadelphia, PA-19122, USA vucetic@temple.edu
+10. Performance Analysis of Topic Modeling Algorithms for news articles: T.Rajasundari1, P.Subathra2, P.N.Kumar3. Amrita University, India
+
+## APPENDIX A 
+### Network Analysis of Documents Using Gephi 
+We analyzed the entire corpus of documents provided by InpharmD from a network analysis standpoint. After creating the adjacent matrix fed to Gephi and allowed the system to form communities using modularity. 
+
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_15.png">
+    </td>
+  </tr>
+  <tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 15: Document Communities visualized using Gephi      </a>
+        </div>
+   </td>
+  </tr>
+  <tr>
+  </tr> 
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_16.png">
+    </td>
+  </tr>
+  <tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 16: Analyzing a community and related documents    </a>
+        </div>
+   </td>
+  </tr>
+</table>
+
+
+
+

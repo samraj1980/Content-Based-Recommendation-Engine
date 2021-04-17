@@ -32,8 +32,8 @@ In this project, we are going to use various content-based recommendation algori
   </tr>
   <tr>
     <td>
-        <div class="text-gray mb-2">
-                .text-gray on white
+        <div class="text-purple">
+            This text is purple, <a href="#" class="text-inherit">including the link</a>
         </div>
     </td>
   </tr>

@@ -32,8 +32,8 @@ In this project, we are going to use various content-based recommendation algori
   </tr>
 </table>
 
-
-<span style="color:blue">Fig 1: System Architecture </span>  
+![#f03c15] Fig 1: System Architecture `#f03c15`
+  
 
 
 

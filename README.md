@@ -32,8 +32,8 @@ In this project, we are going to use various content-based recommendation algori
   </tr>
   <tr>
     <td>
-        <div class="text-blue mb-2">
-            Fig 1: System Architecture
+        <div class="text-gray mb-2">
+                .text-gray on white
         </div>
     </td>
   </tr>

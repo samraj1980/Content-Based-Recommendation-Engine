@@ -29,16 +29,12 @@ In this project, we are going to use various content-based recommendation algori
     <td>
       <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_1.png">
     </td>
-   </tr>
+  </tr>
   <tr>
     <td>
-      [#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) 'Fig 1: System Architecture'
+      [#f03c15]('Fig 1: System Architecture')
     </td>
   </tr>
 </table>
-
- 
-  
-
 
 

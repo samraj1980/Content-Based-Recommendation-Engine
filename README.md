@@ -1,6 +1,7 @@
 # ISYE-6748
 
-
+# 
+[![](https://img.shields.io/badge/authors-%40Sam%20Raj-blue)](https://www.linkedin.com/in/samraj-anand-jeyachandran-pmp-7b273a6/)
 
 # ABSTRACT
 A recent evolution of big data technology enables people to handle huge amounts of data which have been collected in healthcare databases representing patients' health states (e.g., as laboratory results, treatment plans, medical reports). Hence, digital information available for patient-oriented decision-making has increased drastically but is often scattered across different data sources. Yet, expert-oriented language, complex interrelations of medical facts and information overload in general pose major obstacles for patients to understand their own record and to draw adequate conclusions. 

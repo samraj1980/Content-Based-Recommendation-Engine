@@ -125,7 +125,7 @@ Top 20 most commonly occurred word pairs (Two Gram) were also analyzed
   </tr>
 </table>
 
-## 4.0 Feature Engineering 
+## 5.0 Feature Engineering 
 The entire corpus of documents was vectorized using the Term Frequency Inverse Document frequency (TFIDF) vectorizer.  This essentially converts a collection of raw documents to a matrix of TF-IDF features. 
 
 <table>
@@ -144,4 +144,107 @@ The entire corpus of documents was vectorized using the Term Frequency Inverse D
 </table>
 
 The output from the TFIDF vectorizer is a sparse matrix where each row is a document, the features or columns are the words occurring in them, and the value is the TF-IDF weights assigned to these words. The total number of features that were derived from this step was 41,683.
+
+## 6.0 MODEL ENGINEERING 
+
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_6.png">
+    </td>
+  </tr>
+  <tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 6: Model Lifecycle        </a>
+        </div>
+   </td>
+  </tr>
+</table>
+
+### 6.1 COSINE SIMILARITY ALGORITHM
+Cosine similarity is a metric used to determine how similar the documents are irrespective of their size. Consider a new user question; we first transform/Vectorize the user question using the same trained TF-IDF vectorizer. 
+We then calculate the cosine of the angle between two vectors projected in a multi-dimensional space. In this case, the angle between the vectorized user question and each of the vectors (documents) in the sparse matrix is calculated. The smallest cosine angles are extracted and those represent the documents, which is very similar to the user question.  
+
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_7.png">
+    </td>
+  </tr>
+  <tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 7: Cosine Similarity        </a>
+        </div>
+   </td>
+  </tr>
+</table>
+
+### 6.2 K-NEAREST NEIGHBORS (KNN)
+The trained TF-IDF vectorizer is used to train the K-nearest neighbor’s algorithm. The user question is first transformed/vectorized using the trained TF-IDF vectorizer. This vector is then fed to the trained KNN algorithm and the closest neighbors are calculated by measuring the Euclidean distance. The documents with the smallest Euclidean distances are then rendered as recommendations to the user.
+
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_8.png">
+    </td>
+  </tr>
+  <tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 8: KNN visualization of Documents in the Corpus       </a>
+        </div>
+   </td>
+  </tr>
+</table>
+
+### 6.3 TOPIC MODELING (LDA)
+Topic modeling is an unsupervised machine learning modeling approach, which can scan a set of documents, detect words, and phrase patterns. The power of this approach is automatic clustering word group/similar expressions that best characterize a set of documents. Algorithm used for this approach is Latent Dirichlet Algorithm (LDA)
+The entire corpus of documents was segmented into topics and the number of topics was adjusted based on the coherence score, which is a method for hyper tuning the model. 
+
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_9.png">
+    </td>
+  </tr>
+  <tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 9: Topics Segmented by LDA Algorithm        </a>
+        </div>
+   </td>
+  </tr>
+  <tr> 
+  </tr> 
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_10.png">
+    </td>
+  </tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 10: Documents tagged to topics in the corpus     </a>
+        </div>
+   </td>
+  
+</table>
+
+After the documents are segmented by topic, we can feed the vectorized user question as input to the trained LDA model to get the topic this question is assigned to and then the cosine similarity between the vectorized user question and the subset of corpus which are associated to the same topic is performed to get the documents similar to the user question. 
+
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_11.png">
+    </td>
+  </tr>
+  <tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 11: Topic distribution for a User question         </a>
+        </div>
+   </td>
+  </tr>
+</table>
 

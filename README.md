@@ -401,7 +401,7 @@ We analyzed the entire corpus of documents provided by InpharmD from a network a
   <tr>
   <td>
         <div class="text-purple">
-          <a href="#" class="text-inherit">       Fig 16: Analyzing a community and related documents    </a>
+          <a href="#" class="text-inherit">       Fig 16: Analyzing a specific community and related documents    </a>
         </div>
    </td>
   </tr>

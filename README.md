@@ -248,3 +248,21 @@ After the documents are segmented by topic, we can feed the vectorized user ques
   </tr>
 </table>
 
+### 6.4 TRUNCATED SVD
+Truncated Singular Value Decomposition (SVD) is a matrix factorization technique that factors a matrix M into the three matrices U, Σ, and V. This is very similar to PCA, except that the factorization for SVD is done on the data matrix, whereas for PCA, the factorization is done on the covariance matrix. The truncated SVD works well on sparse matrix and gives us the ability to control the number of features or dimensions we want this to be reduced. 
+In this case, the total number of features decreased from the original 41,683 to a fraction of about 3000 dimensions. We can feed the vectorized user question as input to the trained Truncated SVD model to get the transformed vector with only 3000 dimensions. Finally, we can apply the cosine similarity between the vectorized user question and the corpus to get the documents similar to the user question.
+
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_12.png">
+    </td>
+  </tr>
+  <tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 12: Determine Optimal Number of Dimensions in TruncSVD         </a>
+        </div>
+   </td>
+  </tr>
+</table>

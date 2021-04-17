@@ -24,9 +24,16 @@ Thus, it is possible to compute and deliver potentially relevant information doc
 ## System Architecture
 In this project, we are going to use various content-based recommendation algorithms to come up with recommendations. Based on the results from the three algorithms, we will be evaluating and choosing the model, which renders the best recommendation. We will also be exploring an ensemble approach to determine the common recommendations for the specific question across all the trained models.
 
-<img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_1.png">
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_1.png">
+    </td>
+  </tr>
+</table>
 
-<span style="color:blue">some *blue* Fig 1: System Architecture </span>  
+
+<span style="color:blue">Fig 1: System Architecture </span>  
 
 
 

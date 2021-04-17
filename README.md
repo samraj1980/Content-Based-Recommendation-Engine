@@ -124,3 +124,24 @@ Top 20 most commonly occurred word pairs (Two Gram) were also analyzed
    </td>
   </tr>
 </table>
+
+## 4.0 Feature Engineering 
+The entire corpus of documents was vectorized using the Term Frequency Inverse Document frequency (TFIDF) vectorizer.  This essentially converts a collection of raw documents to a matrix of TF-IDF features. 
+
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_5.png">
+    </td>
+  </tr>
+  <tr>
+  <td>
+        <div class="text-purple">
+          <a href="#" class="text-inherit">       Fig 5: TF-IDF workings       </a>
+        </div>
+   </td>
+  </tr>
+</table>
+
+The output from the TFIDF vectorizer is a sparse matrix where each row is a document, the features or columns are the words occurring in them, and the value is the TF-IDF weights assigned to these words. The total number of features that were derived from this step was 41,683.
+

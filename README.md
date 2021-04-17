@@ -32,7 +32,7 @@ In this project, we are going to use various content-based recommendation algori
   </tr>
   <tr>
     <td>
-      'Fig 1: System Architecture'
+       <span style="color:blue">'Fig 1: System Architecture'</span>
     </td>
   </tr>
 </table>

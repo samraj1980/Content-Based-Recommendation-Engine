@@ -395,7 +395,7 @@ We analyzed the entire corpus of documents provided by InpharmD from a network a
   </tr> 
   <tr>
      <td>
-      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/screenshot_16.png">
+      <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/screenshot_16.bmp">
     </td>
   </tr>
   <tr>

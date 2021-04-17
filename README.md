@@ -33,7 +33,7 @@ In this project, we are going to use various content-based recommendation algori
   <tr>
     <td>
         <div class="text-purple">
-            This text is purple, <a href="#" class="text-inherit">including the link</a>
+            <a href="#" class="text-inherit">Fig 1: System Architecture </a>
         </div>
     </td>
   </tr>

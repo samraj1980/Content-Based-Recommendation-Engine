@@ -26,24 +26,16 @@ In this project, we are going to use various content-based recommendation algori
 
 <table>
   <tr>
-    <td> 
-    </td>
-    <td>
+     <td>
       <img src="https://github.com/samraj1980/ISYE-6748/blob/main/Images/Screenshot_1.png">
-    </td>
-    <td> 
     </td>
   </tr>
   <tr>
-    <td> 
-    </td>
-    <td>
+  <td>
         <div class="text-purple">
             <a href="#" class="text-inherit">Fig 1: System Architecture </a>
         </div>
     </td>
-  <td> 
-  </td>
   </tr>
 </table>
 

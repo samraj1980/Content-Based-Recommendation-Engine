@@ -1,7 +1,7 @@
 #                                   Content Based Recommendation Engine for Health Care Providers 
 
 [![](https://img.shields.io/badge/authors-%40Sam%20Raj-blue)](https://www.linkedin.com/in/samraj-anand-jeyachandran-pmp-7b273a6/)
-[![](https://img.shields.io/badge/authors-%40Minkyu Choi-blue)]
+[![](https://img.shields.io/badge/authors-%40Minkyu%20Choi-blue)]
 [![](https://img.shields.io/badge/authors-%40Shubhankgi%20Waghere-blue)]
 
 ## Abstract
